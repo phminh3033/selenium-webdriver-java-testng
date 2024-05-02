@@ -37,7 +37,7 @@ public class Topic_04_Xpath_Register {
 //        driver.findElement(By.xpath("//li[text()='Visit - ']/a[text()='here']")).click();
 //    }
     @Test
-    public void TC_01_Xpath_Rigister() {
+    public void TC_01_Xpath_Register() {
         driver.get("https://demo.guru99.com");
 
         //enter a random email
