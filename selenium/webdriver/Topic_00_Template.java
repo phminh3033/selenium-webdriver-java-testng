@@ -15,6 +15,7 @@ public class Topic_00_Template {
 
     @BeforeClass
     public void beforeClass() {
+        //Selenium ver 2.x, 3.x, 4.x (4.5 trở xún) phai add driver
         if (osName.contains("Windows")) {
             System.setProperty("webdriver.gecko.driver", projectPath + "\\browserDrivers\\geckodriver.exe");
         } else {

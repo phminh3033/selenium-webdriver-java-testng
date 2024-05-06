@@ -17,11 +17,11 @@ public class Topic_04_Xpath_Css_Exercise {
 
     @BeforeClass
     public void beforeClass() {
-        if (osName.contains("Windows")) {
-            System.setProperty("webdriver.gecko.driver", projectPath + "\\browserDrivers\\geckodriver.exe");
-        } else {
-            System.setProperty("webdriver.gecko.driver", projectPath + "/browserDrivers/geckodriver");
-        }
+//        if (osName.contains("Windows")) {
+//            System.setProperty("webdriver.gecko.driver", projectPath + "\\browserDrivers\\geckodriver.exe");
+//        } else {
+//            System.setProperty("webdriver.gecko.driver", projectPath + "/browserDrivers/geckodriver");
+//        }
 
         driver = new FirefoxDriver();
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
