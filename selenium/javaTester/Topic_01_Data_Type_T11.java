@@ -18,6 +18,7 @@ public class Topic_01_Data_Type_T11 {
     char n = 'h';
     String name ="minh";
 
+    //Kieu du lieu tham chieu (Reference type)
     //Class
     FirefoxDriver firefoxDriver = new FirefoxDriver();
     Select select = new Select(firefoxDriver.findElement(By.className("")));
