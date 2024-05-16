@@ -1,6 +1,8 @@
 package webdriver;
 
-import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver; //Tương tác với Browser
+import org.openqa.selenium.WebElement; //Tương tác với Element
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
@@ -10,8 +12,6 @@ import java.util.concurrent.TimeUnit;
 
 public class Topic_07_WebElement_Commands {
     WebDriver driver;
-    String projectPath = System.getProperty("user.dir");
-    String osName = System.getProperty("os.name");
 
     @BeforeClass
     public void beforeClass() {
@@ -21,8 +21,18 @@ public class Topic_07_WebElement_Commands {
     }
 
     @Test
-    public void TC_01_ID() {
+    public void TC_01_Element() {
+        // HTML Element
+        //Tìm element
+        driver.findElement(By.id(""));
 
+        //Tìm và tương tác
+        driver.findElement(By.id("")).click();
+        driver.findElement(By.id("")).sendKeys();
+
+        //Tìm và lưu vào 1 biến WebElement
+        //Khi sử dụng biến này >2 lần
+        WebElement fullNameTextbox = driver.findElement(By.id(""));
     }
 
     @AfterClass
