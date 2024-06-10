@@ -18,6 +18,7 @@ public class Topic_07_WebElement_Commands {
         driver = new FirefoxDriver();
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         driver.manage().window().maximize();
+        // relocation source test
     }
 
     @Test
