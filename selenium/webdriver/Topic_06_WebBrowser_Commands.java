@@ -149,17 +149,6 @@ public class Topic_06_WebBrowser_Commands {
 
     }
 
-    @Test
-    public void TC_02_Class() {
-
-
-    }
-
-    @Test
-    public void TC_03_Name() {
-
-    }
-
     @AfterClass // Post-condition, xóa dữ liệu sau khi test
     public void afterClass() {
         driver.quit();
