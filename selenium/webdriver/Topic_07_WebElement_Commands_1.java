@@ -12,7 +12,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
-public class Topic_07_WebElement_Commands {
+public class Topic_07_WebElement_Commands_1 {
     WebDriver driver;
 
     @BeforeClass

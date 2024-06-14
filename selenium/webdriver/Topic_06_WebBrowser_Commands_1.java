@@ -19,7 +19,7 @@ import java.util.List;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
-public class Topic_06_WebBrowser_Commands {
+public class Topic_06_WebBrowser_Commands_1 {
     WebDriver driver;
 
     @BeforeClass //Pre- condition khởi tạo dữ liệu
