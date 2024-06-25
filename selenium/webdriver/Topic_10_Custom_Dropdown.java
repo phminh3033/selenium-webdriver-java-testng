@@ -67,7 +67,6 @@ public class Topic_10_Custom_Dropdown {
         sleepInSecond(2);
     }
 
-    //helo prv v
     @Test
     public void TC_03_VueJS() {
         driver.get("https://mikerodham.github.io/vue-dropdowns/");
@@ -101,6 +100,36 @@ public class Topic_10_Custom_Dropdown {
         Assert.assertTrue(driver.findElement(By.cssSelector("select[name='DateOfBirthDay']>option[value='23']")).isSelected());
         Assert.assertTrue(driver.findElement(By.cssSelector("select[name='DateOfBirthMonth']>option[value='6']")).isSelected());
         Assert.assertTrue(driver.findElement(By.cssSelector("select[name='DateOfBirthYear']>option[value='2000']")).isSelected());
+    }
+
+    @Test
+    public void TC_06_GoogleForm() {
+        driver.get("https://docs.google.com/forms/d/e/1FAIpQLSfiypnd69zhuDkjKgqvpID9kwO29UCzeCVrGGtbNPZXQok0jA/viewform");
+         WebElement canthoRadio = driver.findElement(By.xpath("//div[@aria-label='Cần Thơ']"));
+
+         Assert.assertEquals(canthoRadio.getAttribute("aria-checked"), "false");
+         Assert.assertTrue(driver.findElement(By.xpath("//div[@aria-label='Cần Thơ' and @aria-checked='false']")).isDisplayed());
+
+        canthoRadio.click();
+
+        Assert.assertEquals(canthoRadio.getAttribute("aria-checked"), "true");
+        Assert.assertTrue(driver.findElement(By.xpath("//div[@aria-label='Cần Thơ' and @aria-checked='true']")).isDisplayed());
+
+        By quangNinhCheckbox = By.xpath("//div[@data-answer-value='Quảng Ninh']");
+
+        Assert.assertEquals(driver.findElement(quangNinhCheckbox).getAttribute("aria-checked"),"false");
+        Assert.assertTrue(driver.findElement(By.xpath("//div[@data-answer-value='Quảng Ninh' and @aria-checked='false']")).isDisplayed());
+
+        driver.findElement(quangNinhCheckbox).click();
+        Assert.assertEquals(driver.findElement(quangNinhCheckbox).getAttribute("aria-checked"),"true");
+        Assert.assertTrue(driver.findElement(By.xpath("//div[@data-answer-value='Quảng Ninh' and @aria-checked='true']")).isDisplayed());
+    }
+
+    @Test
+    public void TC_07_JQuery_Honda() {
+        // Link: https://docs.google.com/document/d/1QRI6jdKoCiMB3K7s16f3jEtAVHICdROpw_t30RD8gac/edit
+        driver.get("https://www.honda.com.vn/o-to/du-toan-chi-phi");
+
     }
 
     @AfterClass

@@ -39,7 +39,6 @@ public class Topic_01_Check_Env {
         Assert.assertTrue(driver.findElement(By.cssSelector("img.fb_logo")).isDisplayed());
     }
 
-    //helo prv v
     @Test
     public void TC_03_Form() {
         Assert.assertTrue(driver.findElement(By.xpath("//form[@data-testid='royal_login_form']")).isDisplayed());
