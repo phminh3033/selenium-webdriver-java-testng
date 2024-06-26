@@ -112,6 +112,7 @@ public class Topic_10_Custom_Dropdown {
 
         canthoRadio.click();
 
+        // 2 cach verify
         Assert.assertEquals(canthoRadio.getAttribute("aria-checked"), "true");
         Assert.assertTrue(driver.findElement(By.xpath("//div[@aria-label='Cần Thơ' and @aria-checked='true']")).isDisplayed());
 

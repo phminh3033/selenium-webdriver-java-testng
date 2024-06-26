@@ -48,4 +48,13 @@ public class Topic_01_Check_Env {
     public void afterClass() {
         driver.quit();
     }
+
+    public void sleepInSecond (long timeSleeping) {
+        try {
+            Thread.sleep(timeSleeping * 1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+    }
 }
+
