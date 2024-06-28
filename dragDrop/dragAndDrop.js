@@ -51,3 +51,4 @@
                 }
         });
 })(jQuery);
+$("div#column-a").simulateDragDrop({ dropTarget: "div#column-b"});
