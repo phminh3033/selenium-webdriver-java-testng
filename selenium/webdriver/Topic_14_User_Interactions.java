@@ -122,7 +122,7 @@ public class Topic_14_User_Interactions {
 
     @Test
     public void TC_04_Right_Click() {
-        By quitContextMenu = By.cssSelector("span.context-menu-one");
+        By quitContextMenu = By.xpath("//li[contains(@class,'context-menu-icon-quit')]");
         driver.get("http://swisnl.github.io/jQuery-contextMenu/demo.html");
 
         actions.contextClick(driver.findElement(By.cssSelector("span.context-menu-one"))).perform();
@@ -132,7 +132,8 @@ public class Topic_14_User_Interactions {
         actions.moveToElement(driver.findElement(quitContextMenu)).perform();
         sleepInSecond(2);
 
-        Assert.assertTrue(driver.findElement(By.xpath("//li[contains(@class,'context-menu-icon-quit context-menu-visible context-menu-hover')]")).isDisplayed());
+        Assert.assertTrue(driver.findElement(By.cssSelector("li.context-menu-icon-quit.context-menu-visible.context-menu-hover")).isDisplayed());
+        //Assert.assertTrue(driver.findElement(By.xpath("//li[contains(@class,'context-menu-icon-quit context-menu-visible context-menu-hover')]")).isDisplayed());
         sleepInSecond(2);
         actions.click(driver.findElement(quitContextMenu)).perform();
         sleepInSecond(2);
