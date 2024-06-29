@@ -46,11 +46,11 @@ public class Topic_16_Shadow_DOM {
     public void TC_02_Shadow_DOM_Shopee() {
         driver.get("https://shopee.vn/");
         WebElement shadowHost = driver.findElement(By.cssSelector("shopee-banner-popup-stateful"));
-        SearchContext shadowRoot = shadowHost.getShadowRoot();
-        if (shadowRoot.findElements(By.cssSelector("div.home-popup__content")).size() > 0 &&
-                shadowRoot.findElements(By.cssSelector("div.home-popup__content")).get(0).isDisplayed()){
+        SearchContext shadowRootContext = shadowHost.getShadowRoot();
+        if (shadowRootContext.findElements(By.cssSelector("div.home-popup__content")).size() > 0
+                && shadowRootContext.findElements(By.cssSelector("div.home-popup__content")).get(0).isDisplayed()){
 
-            shadowRoot.findElement(By.cssSelector("div.shopee-popup__close-btn")).click();
+            shadowRootContext.findElement(By.cssSelector("div.shopee-popup__close-btn")).click();
             sleepInSecond(2);
         }
         driver.findElement(By.cssSelector("input.shopee-searchbar-input__input")).sendKeys("Iphone");
