@@ -1,6 +1,5 @@
 package webdriver;
 
-import com.beust.ah.A;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -11,9 +10,7 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import javax.swing.*;
 import java.time.Duration;
-import java.util.concurrent.TimeUnit;
 
 public class Topic_15_Popup {
     WebDriver driver;

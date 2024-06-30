@@ -12,7 +12,6 @@ import org.testng.annotations.Test;
 
 import java.time.Duration;
 import java.util.List;
-import java.util.concurrent.TimeUnit;
 
 public class Topic_12_Radio_Checkbox {
     WebDriver driver;

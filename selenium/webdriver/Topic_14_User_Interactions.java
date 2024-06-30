@@ -1,6 +1,5 @@
 package webdriver;
 
-import com.beust.ah.A;
 import org.openqa.selenium.*;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.Point;

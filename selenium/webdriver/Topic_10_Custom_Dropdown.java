@@ -13,7 +13,6 @@ import org.testng.annotations.Test;
 
 import java.time.Duration;
 import java.util.List;
-import java.util.concurrent.TimeUnit;
 
 public class Topic_10_Custom_Dropdown {
     WebDriver driver;
