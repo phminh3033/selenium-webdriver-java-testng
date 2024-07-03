@@ -10,21 +10,35 @@ import org.testng.annotations.Test;
 
 import java.time.Duration;
 
-public class Topic_23_ImplicitWait {
+public class Topic_24_Wait_04_Static_Dead_Hard {
     WebDriver driver;
 
     @BeforeClass
     public void beforeClass() {
         driver = new FirefoxDriver();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10)); // set 1 lan duy nhat
-        driver.manage().window().maximize();
     }
 
     @Test
-    public void TC_01_ImplicitWait() {
+    public void TC_01_Equal_5s() {
         driver.get("https://automationfc.github.io/dynamic-loading/");
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
         driver.findElement(By.cssSelector("div#start>button")).click();
+        sleepInSecond(5);
+        Assert.assertEquals(driver.findElement(By.cssSelector("div#finish>h4")).getText(), "Hello World!");
+    }
+
+    @Test
+    public void TC_01_Less_Than_5s() {
+        driver.get("https://automationfc.github.io/dynamic-loading/");
+        driver.findElement(By.cssSelector("div#start>button")).click();
+        sleepInSecond(3);
+        Assert.assertEquals(driver.findElement(By.cssSelector("div#finish>h4")).getText(), "Hello World!");
+    }
+
+    @Test
+    public void TC_01_Greater_Than_5s() {
+        driver.get("https://automationfc.github.io/dynamic-loading/");
+        driver.findElement(By.cssSelector("div#start>button")).click();
+        sleepInSecond(10);
         Assert.assertEquals(driver.findElement(By.cssSelector("div#finish>h4")).getText(), "Hello World!");
     }
 
