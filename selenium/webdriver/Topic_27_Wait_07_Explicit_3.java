@@ -31,8 +31,7 @@ public class Topic_27_Wait_07_Explicit_3 {
     @BeforeClass
     public void beforeClass() {
         driver = new FirefoxDriver();
-        explicitWait = new WebDriverWait(driver, Duration.ofSeconds(10));
-
+        explicitWait = new WebDriverWait(driver, Duration.ofSeconds(20));
     }
 
     @Test
@@ -52,6 +51,7 @@ public class Topic_27_Wait_07_Explicit_3 {
     @Test
     public void TC_02_Upload_File() {
         driver.get("https://gofile.io/welcome");
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 
         // Wait + Verify Spinner icon bien mat
         Assert.assertTrue(explicitWait.until(ExpectedConditions.invisibilityOfElementLocated(By.cssSelector("div.spinner-border"))));
