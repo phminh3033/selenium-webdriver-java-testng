@@ -1,14 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Selenium WebDriver">
+    <groups>
+        <run>
+            <include name="customers"/>
+        </run>
+    </groups>
     <test verbose="2" preserve-order="true" name="Run on Firefox">
-        <classes>
-            <class name="testNG.Topic_01_Sample"/>
-            <class name="testNG.Topic_02_Annotations">
-                <methods>
-                    <include name="TC_02"/>
-                </methods>
-            </class>
-        </classes>
+        <packages>
+            <package name="categories"></package>
+            <package name="customers"></package>
+            <package name="orders"></package>
+        </packages>
+<!--        <classes>-->
+<!--            <class name="testNG.Topic_01_Sample"/>-->
+<!--            <class name="testNG.Topic_02_Annotations">-->
+<!--                <methods>-->
+<!--                    <include name="TC_02"/>-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--        </classes>-->
     </test>
 </suite>

@@ -24,6 +24,12 @@ public class Topic_29_Wait_9_Fluent {
     public void beforeClass() {
         driver = new FirefoxDriver();
         fluentDriver = new FluentWait<WebDriver>(driver);
+
+        // Timeout - Default Polling Time: 0.5s
+        //explicitWait = new WebDriverWait(driver, Duration.ofSeconds(10));
+
+        // Timeout - Custom Polling Time: X s
+        //explicitWait = new WebDriverWait(driver, Duration.ofSeconds(10), Duration.ofMillis(300));
     }
 
     @Test
