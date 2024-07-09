@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Orange">
+    <test name="Run on Firefox">
+        <parameter name="browser" value="firefox"/>
+        <parameter name="device" value="PC"/>
+        <packages>
+            <package name="testNG"></package>
+        </packages>
+    </test>
+</suite>

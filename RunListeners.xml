@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Orange">
+    <listeners>
+        <listener class-name="listeners.ExtentReport"></listener>
+    </listeners>
+    <test name="Run on Firefox">
+        <parameter name="browser" value="firefox"/>
+        <parameter name="device" value="PC"/>
+        <classes>
+            <class name="testNG.Topic_01_Sample"></class>
+            <class name="testNG.Topic_13_Dependencies"></class>
+        </classes>
+    </test>
+</suite>

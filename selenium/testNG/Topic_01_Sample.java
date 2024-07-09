@@ -1,11 +1,19 @@
 package testNG;
 
 import org.testng.Assert;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import java.util.Random;
 
 public class Topic_01_Sample {
+
+    @BeforeClass
+    public void beforeClass() {
+        System.out.println("Before Class");
+    }
+
     //Unit Test
     @Test
     public void testGetRandomNumber() {
@@ -17,5 +25,10 @@ public class Topic_01_Sample {
     //Component
     private int getRandomNumber() {
         return new Random().nextInt(1000000);
+    }
+
+    @AfterClass
+    public void afterClass() {
+        System.out.println("After Class");
     }
 }

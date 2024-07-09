@@ -13,7 +13,7 @@ import java.time.Duration;
 public class Topic_09_Parameter {
     WebDriver driver;
 
-    @Parameters({"browser","version"})
+    @Parameters({"browser","device"})
     @BeforeClass
     public void beforeClass(String browserName, String browserVersion) {
         driver = getBrowserName(browserName);
