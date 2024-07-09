@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Selenium WebDriver">
+
+    <test name="Run on Firefox">
+        <parameter name="browser" value="firefox"/>
+        <parameter name="version" value="latest"/>
+        <classes>
+            <class name="testNG.Topic_09_Parameter"/>
+        </classes>
+    </test>
+
+    <test name="Run on Chrome">
+        <parameter name="browser" value="chrome"/>
+        <parameter name="version" value="latest"/>
+        <classes>
+            <class name="testNG.Topic_09_Parameter"/>
+        </classes>
+    </test>
+
+    <test name="Run on Edge">
+        <parameter name="browser" value="edge"/>
+        <parameter name="version" value="latest"/>
+        <classes>
+            <class name="testNG.Topic_09_Parameter"/>
+        </classes>
+    </test>
+</suite>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Selenium WebDriver" parallel="methods" thread-count="6">
+
+    <test name="Run on Firefox">
+        <classes>
+            <class name="testNG.Topic_12_Parameter_Method"/>
+        </classes>
+    </test>
+</suite>
